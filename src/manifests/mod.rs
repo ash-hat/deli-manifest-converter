@@ -20,18 +20,6 @@ impl<V> Default for FieldMap<V> {
     }
 }
 
-impl<V> AsRef<Vec<Field<V>>> for FieldMap<V> {
-    fn as_ref(&self) -> &Vec<Field<V>> {
-        &self.0
-    }
-}
-
-impl<V> AsMut<Vec<Field<V>>> for FieldMap<V> {
-    fn as_mut(&mut self) -> &mut Vec<Field<V>> {
-        &mut self.0
-    }
-}
-
 impl<V: Serialize> Serialize for FieldMap<V> {
     fn serialize<S>(&self, serializer: S) -> Result<<S as Serializer>::Ok, <S as Serializer>::Error>
     where
