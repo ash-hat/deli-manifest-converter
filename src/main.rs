@@ -50,11 +50,20 @@ fn main() {
             runtime: {
                 let mut map = HashMap::new();
 
+                //C# Assemblies
                 insert_conv(&mut map, "assembly", "deli", "assembly");
 
+                //TNH Tweaker Characters
                 insert_conv(&mut map, "Character", "h3vr.tnhtweaker.deli", "character");
+                
+                //TNH Tweaker Sosigs
                 insert_conv(&mut map, "Sosig", "h3vr.tnhtweaker.deli", "sosig");
+                
+                //TNH Tweaker vault file
                 insert_conv(&mut map, "VaultFile", "h3vr.tnhtweaker.deli", "vault_file");
+                
+                //Wurst Mod map
+                insert_conv(&mut map, "Level","wurstmodders.wurstmod", "level");
 
                 map
             },
